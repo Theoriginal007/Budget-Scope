@@ -5,16 +5,16 @@ function Dashboard() {
     <div className="dashboard">
       <div className="stats">
         <div className="stat-box">
-          <h3>Ksh 43 Million</h3>
-          <p>Openning Balance</p>
+          <h3>Ksh 6.4 Billion</h3>
+          <p>Opening Balance</p>
         </div>
         <div className="stat-box">
           <h3>Ksh 600 Billion </h3>
-          <p>revious Arrears</p>
+          <p>Current Budget</p>
         </div>
         <div className="stat-box">
           <h3>Ksh 7 Trillion</h3>
-          <p>Total Balance Allocation</p>
+          <p>Total Balance</p>
         </div>
         <div className="stat-box">
           <h3>Ksh 95 Million</h3>
@@ -27,7 +27,7 @@ function Dashboard() {
       </div>
       <div className="charts">
         <div className="chart">Chart 1</div>
-        <div className="chart">Chart 2</div>
+        {/* <div className="chart">Chart 2</div> */}
       </div>
       <div className="activity">
         <h3>Development Activity</h3>

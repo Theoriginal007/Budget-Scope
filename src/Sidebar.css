@@ -1,0 +1,120 @@
+/* Sidebar container */
+.App-sidebar {
+  width: 250px; /* Adjust width as needed */
+  min-width: 200px; /* Minimum width to maintain layout */
+  background-color: #f4f4f4;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+/* Heading styles */
+.App-sidebar h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #343a40;
+}
+
+.App-sidebar h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #495057;
+  cursor: pointer;
+}
+
+/* Search input */
+.Sidebar-search {
+  margin-bottom: 20px;
+}
+
+.Sidebar-search-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+/* Filter sections */
+.Sidebar-filter {
+  margin-bottom: 20px;
+}
+
+.Sidebar-filter-dropdown {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 200px; /* Limit height */
+  overflow-y: auto; /* Scroll if needed */
+}
+
+.Sidebar-filter-dropdown li {
+  margin-bottom: 10px;
+}
+
+.Sidebar-filter-dropdown button {
+  background: none;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  color: #495057;
+  width: 100%;
+  text-align: left;
+}
+
+.Sidebar-filter-dropdown button.active {
+  background-color: #007bff;
+  color: #ffffff;
+  border-color: #007bff;
+}
+
+.Sidebar-filter-dropdown button:hover {
+  background-color: #e9ecef;
+}
+
+/* Dropdown arrow */
+.Sidebar-filter-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-arrow {
+  margin-left: auto;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-arrow.down {
+  border-top: 6px solid #495057;
+}
+
+.dropdown-arrow.up {
+  border-bottom: 6px solid #495057;
+  transform: rotate(180deg);
+}
+
+/* Clear filters button */
+.Sidebar-clear-filters {
+  margin-top: 20px;
+}
+
+.clear-filters-btn {
+  background-color: #dc3545;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.clear-filters-btn:hover {
+  background-color: #c82333;
+}

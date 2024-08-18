@@ -1,0 +1,133 @@
+/* Container for the dashboard */
+.App-dashboard {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Controls for switching between charts */
+.Chart-controls {
+  margin-bottom: 20px;
+}
+
+.Chart-controls button {
+  padding: 10px 15px;
+  margin-right: 10px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.Chart-controls button.active {
+  background-color: #0056b3;
+}
+
+/* Image styling */
+.dashboard-image {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding shadow for depth */
+}
+
+/* Category Summary Section */
+.Category-summary {
+  margin-top: 30px;
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.Category-summary h3 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  color: #343a40;
+}
+
+.Category-summary h3 svg {
+  margin-right: 10px;
+  color: #007bff;
+}
+
+/* Category List Styling */
+.Category-summary ul {
+  list-style: none;
+  padding: 0;
+}
+
+.Category-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.Category-item:last-child {
+  border-bottom: none;
+}
+
+.Category-entity {
+  font-weight: bold;
+  color: #495057;
+}
+
+.Category-amount {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.Category-percentage {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 0.9em;
+  color: white;
+}
+
+/* Percentage color coding */
+.Category-percentage.low {
+  background-color: #ffc107; /* Yellow for low percentages */
+}
+
+.Category-percentage.medium {
+  background-color: #17a2b8; /* Teal for medium percentages */
+}
+
+.Category-percentage.high {
+  background-color: #dc3545; /* Red for high percentages */
+}
+
+/* Overall summary */
+.Total-Info {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #e9ecef;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.Total-Info h3 {
+  color: #343a40;
+  margin-bottom: 20px;
+}
+
+.Total-Info p {
+  margin: 0 0 10px;
+  color: #495057;
+  font-weight: bold;
+}
+
+.Total-Info strong {
+  color: #007bff;
+}
+
+/* Error message styling */
+.error-message {
+  color: red;
+  font-weight: bold;
+}

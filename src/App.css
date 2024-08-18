@@ -30,6 +30,11 @@ body {
   margin: 0 10px;
   font-size: 1.5em;
   cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.icon:hover {
+  color: #007bff;
 }
 
 .user-info {
@@ -65,6 +70,11 @@ body {
   margin-right: 10px;
 }
 
+.sidebar li:hover {
+  background-color: #e9ecef;
+  cursor: pointer;
+}
+
 .dashboard {
   flex: 1;
   padding: 20px;
@@ -86,6 +96,10 @@ body {
   margin: 0 10px;
 }
 
+.stat-box:hover {
+  background-color: #f1f3f5;
+}
+
 .charts {
   display: flex;
   justify-content: space-between;
@@ -100,6 +114,11 @@ body {
   flex: 1;
   margin: 0 10px;
   text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.chart:hover {
+  background-color: #f1f3f5;
 }
 
 .activity {
@@ -116,4 +135,40 @@ body {
 
 .activity li {
   padding: 10px 0;
+}
+
+.App {
+  font-family: Arial, sans-serif;
+}
+
+.App-body {
+  display: flex;
+  flex-direction: row; /* Ensure the sidebar and content appear in a row */
+  flex: 1; /* Allow the body to take up available space */
+}
+
+.sidebar {
+  width: 200px; /* Fixed width for sidebar */
+  background-color: #f8f9fa;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.Content {
+  flex: 1; /* Take up remaining space */
+  padding: 20px;
+  background-color: #fff; /* Optional background color for content area */
+}
+
+.NotFound {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.NotFound h2 {
+  font-size: 2rem;
+}
+
+.NotFound p {
+  font-size: 1.2rem;
 }

@@ -1,0 +1,59 @@
+.App-header {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px; /* Fixed height for the header */
+}
+
+.Header-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.Header-logo {
+  flex: 1;
+}
+
+.Header-logo-img {
+  height: 40px; /* Adjust as needed */
+}
+
+.Header-nav {
+  flex: 2;
+}
+
+.Header-nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-around; /* Distribute nav items evenly */
+  margin: 0;
+  padding: 0;
+  width: 100%; /* Ensure it uses available width */
+}
+
+.Header-nav-list li {
+  margin: 0; /* Remove margin if using space-around or space-evenly */
+}
+
+.Header-nav-list a {
+  text-decoration: none;
+  color: white; /* Ensure text is visible on dark background */
+  font-weight: bold;
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.Header-nav-list a:hover {
+  color: #007bff;
+}
+
+.Header-user {
+  flex: 1;
+  text-align: right;
+}

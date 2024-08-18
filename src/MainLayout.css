@@ -1,0 +1,29 @@
+/* src/MainLayout.css */
+
+.Main-container {
+    display: flex; /* Flexbox for side-by-side layout */
+    gap: 20px; /* Space between sidebar and feedback form */
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in width calculation */
+    height: 100vh; /* Ensure the container takes full viewport height */
+  }
+  
+  .App-sidebar {
+    width: 250px; /* Adjust width of the sidebar */
+    min-width: 200px; /* Ensure a minimum width */
+    background-color: #f4f4f4; /* Light background for visibility */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Include padding and border in width calculation */
+  }
+  
+  .Feedback-form {
+    flex: 1; /* Allow the feedback form to take up remaining space */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Include padding and border in width calculation */
+  }
+  

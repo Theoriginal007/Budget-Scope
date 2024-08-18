@@ -19,59 +19,51 @@ const exchangeRate = 140; // 1 USD = 140 KES
 
 const totalBudgetKES = 3600000000000; // 3.6 trillion KSh
 
-// Budget allocations
-const departments = [
-  'Ministry of Finance',
-  'National Treasury',
-  'Office of the Controller of Budget',
-  'Kenya Revenue Authority',
-  'Public Service Commission',
-  'State Department for Planning',
-  'Ministry of Devolution and ASAL',
-  'National Assembly Budget Office',
-  'Ministry of Economic Planning',
-  'Ministry of Health',
-  'Ministry of Education',
-  'Ministry of Agriculture',
-  'Ministry of Transport',
-  'Ministry of Energy',
-  'Ministry of Water and Sanitation',
-  'Ministry of Industrialization',
-  'Ministry of Youth Affairs',
-  'Ministry of Sports',
-  'Ministry of Foreign Affairs',
-  'Ministry of Defense',
-  'Ministry of Interior and Coordination of National Government',
-  'Ministry of Labor and Social Protection',
-  'Ministry of Environment and Forestry',
-  'Ministry of Tourism and Wildlife',
-  'Ministry of Public Service and Gender',
-  'Ministry of Culture and Heritage',
-  'Ministry of Lands and Physical Planning',
-  'Ministry of East African Community',
-  'Ministry of ICT, Innovation and Youth Affairs',
-  'Ministry of Cooperatives and MSME Development',
-  'Ministry of Public Works and Roads',
-  'Ministry of Information and Communication Technology',
-  'Ministry of Petroleum and Mining',
-  'Ministry of Trade, Investments and Industry',
-  'Ministry of Transport and Infrastructure',
-  'Ministry of Devolution and Planning',
-  'Ministry of Water, Sanitation and Irrigation',
-  'Ministry of Environment and Natural Resources',
-  'Ministry of Agriculture, Livestock and Fisheries',
-  'Ministry of National Heritage, Culture and Sports',
-  'Ministry of Science and Technology',
-  'Ministry of Development of Northern Kenya and Other Arid Lands'
-];
-
-// Calculate budgets
-const calculateBudget = (totalBudget, entities) => {
-  const perEntity = totalBudget / entities.length;
-  return entities.map(entity => ({ entity, amount: perEntity }));
+// Budget allocations (in KSh)
+const budgetAllocations = {
+  'Ministry of Finance': 500000000000,
+  'National Treasury': 400000000000,
+  'Office of the Controller of Budget': 300000000000,
+  'Kenya Revenue Authority': 350000000000,
+  'Public Service Commission': 200000000000,
+  'State Department for Planning': 250000000000,
+  'Ministry of Devolution and ASAL': 150000000000,
+  'National Assembly Budget Office': 100000000000,
+  'Ministry of Economic Planning': 180000000000,
+  'Ministry of Health': 500000000000,
+  'Ministry of Education': 600000000000,
+  'Ministry of Agriculture': 250000000000,
+  'Ministry of Transport': 300000000000,
+  'Ministry of Energy': 200000000000,
+  'Ministry of Water and Sanitation': 150000000000,
+  'Ministry of Industrialization': 120000000000,
+  'Ministry of Youth Affairs': 100000000000,
+  'Ministry of Sports': 80000000000,
+  'Ministry of Foreign Affairs': 70000000000,
+  'Ministry of Defense': 450000000000,
+  'Ministry of Interior and Coordination of National Government': 400000000000,
+  'Ministry of Labor and Social Protection': 150000000000,
+  'Ministry of Environment and Forestry': 200000000000,
+  'Ministry of Tourism and Wildlife': 120000000000,
+  'Ministry of Public Service and Gender': 100000000000,
+  'Ministry of Culture and Heritage': 80000000000,
+  'Ministry of Lands and Physical Planning': 150000000000,
+  'Ministry of East African Community': 100000000000,
+  'Ministry of ICT, Innovation and Youth Affairs': 200000000000,
+  'Ministry of Cooperatives and MSME Development': 80000000000,
+  'Ministry of Public Works and Roads': 250000000000,
+  'Ministry of Information and Communication Technology': 150000000000,
+  'Ministry of Petroleum and Mining': 200000000000,
+  'Ministry of Trade, Investments and Industry': 180000000000,
+  'Ministry of Transport and Infrastructure': 300000000000,
+  'Ministry of Devolution and Planning': 150000000000,
+  'Ministry of Water, Sanitation and Irrigation': 200000000000,
+  'Ministry of Environment and Natural Resources': 180000000000,
+  'Ministry of Agriculture, Livestock and Fisheries': 250000000000,
+  'Ministry of National Heritage, Culture and Sports': 70000000000,
+  'Ministry of Science and Technology': 100000000000,
+  'Ministry of Development of Northern Kenya and Other Arid Lands': 120000000000,
 };
-
-const departmentsData = calculateBudget(totalBudgetKES, departments);
 
 // Format large numbers
 const formatNumber = (number) => {
@@ -97,7 +89,7 @@ function Dashboard() {
     // Simulate fetching data
     setLoading(true);
     setTimeout(() => {
-      setBudgetData(departmentsData); // Use departmentsData for demonstration
+      setBudgetData(Object.entries(budgetAllocations).map(([entity, amount]) => ({ entity, amount })));
       setLoading(false);
     }, 1000);
   }, []);
